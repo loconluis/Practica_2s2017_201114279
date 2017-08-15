@@ -24,7 +24,7 @@ class Queue():
         self.cola = None
         self.size = 0
 
-    def estaVacia(self):
+    def isEmpty(self):
         if self.cabeza is None:
             return True
         else:
@@ -33,7 +33,7 @@ class Queue():
     def queue(self, dato):
         nuevo = Node()
         nuevo.setDato(dato)
-        if self.estaVacia() is True:
+        if self.isEmpty() is True:
             self.cabeza= nuevo
             self.cola=self.cabeza
         else:

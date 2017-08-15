@@ -13,7 +13,12 @@ app = Flask("Estructuras")
 def hello():
     return "Hello World"
 
+# Ruta de acceso a conectado que devuelve un string carnet
+@app.route('/conectado')
+def hello():
+    return "201114279"
 
+# Mas rutas
 #Aqui se configura los datos
 app.run()
 
