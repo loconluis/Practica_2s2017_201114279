@@ -69,6 +69,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master.Designer.cs">
+      <DependentUpon>Master.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mensajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mensajes.resx">
       <DependentUpon>Mensajes.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RMensajes.resx">
+      <DependentUpon>RMensajes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

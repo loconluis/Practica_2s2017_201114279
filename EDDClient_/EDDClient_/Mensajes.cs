@@ -20,6 +20,7 @@ namespace EDDClient_
         private void btnsend_Click(object sender, EventArgs e)
         {
             Envio s = new Envio();
+            s.MdiParent = this.MdiParent;
             s.Show();
             this.Close();
         }
@@ -27,6 +28,7 @@ namespace EDDClient_
         private void btnQmess_Click(object sender, EventArgs e)
         {
             ColaMensajes c = new ColaMensajes();
+            c.MdiParent = this.MdiParent;
             c.Show();
             this.Close();
         }
@@ -34,6 +36,7 @@ namespace EDDClient_
         private void btnAnswers_Click(object sender, EventArgs e)
         {
             RMensajes r = new RMensajes();
+            r.MdiParent = this.MdiParent;
             r.Show();
             this.Close();
         }

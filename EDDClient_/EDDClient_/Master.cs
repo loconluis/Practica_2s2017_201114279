@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace EDDClient_
 {
-    public partial class RMensajes : Form
+    public partial class Master : Form
     {
-        public RMensajes()
+        public Master()
         {
             InitializeComponent();
         }
 
-        private void btnback_Click(object sender, EventArgs e)
+        private void correrToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Mensajes m = new Mensajes();
-            m.MdiParent = this.MdiParent;
-            m.Show();
-            Close();
+            frm_home s = new frm_home();
+            s.MdiParent = this;
+            s.Show();
         }
     }
 }
