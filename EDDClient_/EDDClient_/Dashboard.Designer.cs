@@ -41,13 +41,14 @@
             this.btnloadJSON.TabIndex = 0;
             this.btnloadJSON.Text = "Cargar JSON";
             this.btnloadJSON.UseVisualStyleBackColor = true;
+            this.btnloadJSON.Click += new System.EventHandler(this.btnloadJSON_Click);
             // 
             // dgv_users
             // 
             this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_users.Location = new System.Drawing.Point(38, 96);
+            this.dgv_users.Location = new System.Drawing.Point(38, 155);
             this.dgv_users.Name = "dgv_users";
-            this.dgv_users.Size = new System.Drawing.Size(704, 241);
+            this.dgv_users.Size = new System.Drawing.Size(704, 182);
             this.dgv_users.TabIndex = 1;
             // 
             // Dashboard

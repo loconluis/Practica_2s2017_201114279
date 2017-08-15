@@ -15,7 +15,7 @@ def hello():
 
 # Ruta de acceso a conectado que devuelve un string carnet
 @app.route('/conectado')
-def hello():
+def carnet():
     return "201114279"
 
 # Mas rutas
