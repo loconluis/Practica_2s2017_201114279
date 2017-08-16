@@ -1,10 +1,11 @@
 # Lista enlazada simple
 
-class Node():
+class NodeL():
 
     def __init__(self):
         self.ip = None
         self.mask = None
+        self.carnet = None
         self.pos = None
         self.sig = None
 
@@ -19,6 +20,12 @@ class Node():
 
     def setMask(self, mask):
         self.mask = mask
+
+    def getCarnet(self):
+        return self.carnet
+
+    def setCarnet(self, carnet):
+        self.carnet = carnet
 
     def getPos(self):
         return self.pos
@@ -39,17 +46,17 @@ class List():
         self.index = None
         self.size = 0
 
-    def isEmpty(self):
+    def isEmptyL(self):
         if self.index is None:
             return True
         else:
             return False
 
-    def add(self, ip, mask):
-        nuevo = Node()
+    def addL(self, ip, mask):
+        nuevo = NodeL()
         nuevo.setIP(ip)
         nuevo.setMask(mask)
-        if self.isEmpty() is True:
+        if self.isEmptyL() is True:
             self.index = nuevo
             self.size = self.size + 1
             nuevo.setPos(self.size)
@@ -62,25 +69,25 @@ class List():
             self.size = self.size + 1
             nuevo.setPos(self.size)
 
-    def search(self, pos):
-        temp = Node()
+    def searchL(self, ip, carnet):
+        temp = NodeL()
         temp = self.indice
         i = 1
         while temp is not None:
-            if temp.getPos() == pos:
-                return str(i)
+            if temp.getIP == ip:
+                temp.setCarnet(carnet)
             else:
                 temp = temp.getSig()
             i = i + 1
         return "Dato no encontrado"
 
-    def length(self):
+    def lengthL(self):
         value = self.size
         return value
 
     def printList(self):
-        if self.isEmpty() is False:
-            aux = Node()
+        if self.isEmptyL() is False:
+            aux = NodeL()
             aux = self.index
             while aux is not None:
                 print "IP: " + aux.getIP() + " Mask" + aux.getMask()

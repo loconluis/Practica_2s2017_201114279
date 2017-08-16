@@ -23,7 +23,7 @@ class Stack():
         self.tail = None
         self.size = 0
 
-    def isEmpty(self):
+    def isEmptyP(self):
         if self.head is None:
             return True
         else:
@@ -32,7 +32,7 @@ class Stack():
     def push(self, dato):
         nuevo = NodeP()
         nuevo.setDato(dato)
-        if self.isEmpty() is True:
+        if self.isEmptyP() is True:
             self.head = nuevo
             self.tail = self.head
             self.size = self.size + 1
@@ -73,7 +73,7 @@ class Stack():
 
     def verPila(self):
         """Imprime la pila."""
-        if self.estaVacia() is False:
+        if self.isEmptyP() is False:
             actual = NodoP()
             actual = self.cabeza
             while actual is not None:
@@ -82,6 +82,6 @@ class Stack():
         else:
             print "No te salio"
 
-    def lengthS(self):
+    def lengthP(self):
         value = self.size
         return value

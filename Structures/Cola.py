@@ -1,5 +1,5 @@
 #Cola
-class Node():
+class NodeQ():
 
     def __init__(self):
         self.dato = None
@@ -24,20 +24,20 @@ class Queue():
         self.cola = None
         self.size = 0
 
-    def isEmpty(self):
+    def isEmptyQ(self):
         if self.cabeza is None:
             return True
         else:
             return False
 
     def queue(self, dato):
-        nuevo = Node()
+        nuevo = NodeQ()
         nuevo.setDato(dato)
-        if self.isEmpty() is True:
+        if self.isEmptyQ() is True:
             self.cabeza= nuevo
             self.cola=self.cabeza
         else:
-            temp = Node()
+            temp = NodeQ()
             temp = self.cabeza
             while temp.getSig() is not None:
                 temp = temp.getSig()
@@ -46,7 +46,7 @@ class Queue():
 
     def dequeue(self):
         if self.cabeza is not None:
-            temp = Node()
+            temp = NodeQ()
             temp = self.cabeza
             self.cabeza = temp.getSig()
             return temp.getDato()
@@ -54,7 +54,7 @@ class Queue():
         else:
             return "Empty List"
 
-    def length(self):
+    def lengthQ(self):
         """Metodo devuelve la longitud de la Cola."""
         value = self.size
         return value
@@ -62,7 +62,7 @@ class Queue():
     def printQueue(self):
         """Imprime la cola."""
         if self.estaVacia() is False:
-            aux = Node()
+            aux = NodeQ()
             aux = self.cabeza
             while aux is not None:
                 print aux.getDato()
